@@ -38,8 +38,7 @@ def app():
     UG = st.text_input('Enter your UG percentage')
     UG_Course=st.selectbox('Select your Under Graduate Course 1-BCS , 2-BCA, 3-B.Sc. Comp.Sci, 4-B.Com, 5-B.Sc., 6-B.Sc. IT, 7-B.Sc. Bioinformatics', [1, 2,3,4,5,6,7])
     PG = st.text_input('Enter your PG percentage')
-    
-    UG_Course = st.text_input('Enter UG specialization 1-BCA  2-BCS  3-B.Com: ')
+     
     Student_Category=st.selectbox('Select your Caste category 1-OPEN , 2-NT, 3-OBC , 4-SC, 5-SBC, 6-VJ, 7-ST', [1, 2,3,4,5,6,7])
     Certification = st.selectbox('Have you done any certification 1-Yes , 0-No', [1, 0])
     Extracurricular = st.selectbox('Have you participated in any extracurricular activity 1-Yes , 0-No', [1, 0])
@@ -49,7 +48,7 @@ def app():
 
     if submit_button:
         # Create input dataframe
-        input_df = pd.DataFrame({'tenth':[tenth],'twelth': [twelth], 'UG': [UG],'PG': [PG], 'Gender': [Gender],'UG_Course': [UG_Course]})
+        input_df = pd.DataFrame({'tenth':[tenth],'tenth_board':[tenth_board],'twelth': [twelth],'twelth_board':[twelth_board],'twelth_stream':[twelth_stream],'UG': [UG],'UG_Course': [UG_Course]'PG': [PG], 'Gender': [Gender],'UG_Course': [UG_Course]})
         
         # One-hot encode categorical variables
         # input_df['Gender'] = input_df['Gender'].map({'M': 1, 'F': 0})
