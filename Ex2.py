@@ -43,7 +43,7 @@ def app():
     Student_Category=st.selectbox('Select your Caste category 1-OPEN , 2-NT, 3-OBC , 4-SC, 5-SBC, 6-VJ, 7-ST', [1, 2,3,4,5,6,7])
     Certification = st.selectbox('Have you done any certification 1-Yes , 0-No', [1, 0])
     Extracurricular = st.selectbox('Have you participated in any extracurricular activity 1-Yes , 0-No', [1, 0])
-    Backlogs = st.selectbox('Do you have/had any backlogs 1-Yes , 0-No', [1, 0])
+    Backlogs = st.text_input('Do you have/had any backlogs, if yes write no of backlogs otherwise put 0 ')
     # Add button to make prediction
     submit_button = st.form_submit_button(label='Predict Placement')
 
