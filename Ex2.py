@@ -31,12 +31,19 @@ def app():
  with st.form(key='placement-form'):
     # Get input from user
     tenth = st.text_input('Enter your 10th percentage')
+    tenth_board=st.selectbox('Select your 10th board 1-State , 2-CBSE, 3-ICSE', [1, 2,3])
     twelth = st.text_input('Enter your 12th percentage')
+    twelth_board=st.selectbox('Select your 12th board 1-State , 2-CBSE, 3-ICSE', [1, 2,3])
+    twelth_stream=st.selectbox('Select your 12th Stream 1-Science , 2-Commerce, 3-Arts', [1, 2,3])
     UG = st.text_input('Enter your UG percentage')
+    UG_Course=st.selectbox('Select your Under Graduate Course 1-BCS , 2-BCA, 3-B.Sc. Comp.Sci, 4-B.Com, 5-B.Sc., 6-B.Sc. IT, 7-B.Sc. Bioinformatics', [1, 2,3,4,5,6,7])
     PG = st.text_input('Enter your PG percentage')
-    Gender = st.selectbox('Select your gender 1-Male , 0-Female', [1, 0])
+    
     UG_Course = st.text_input('Enter UG specialization 1-BCA  2-BCS  3-B.Com: ')
-
+    Student_Category=st.selectbox('Select your Caste category 1-OPEN , 2-NT, 3-OBC , 4-SC, 5-SBC, 6-VJ, 7-ST', [1, 2,3,4,5,6,7])
+    Certification = st.selectbox('Have you done any certification 1-Yes , 0-No', [1, 0])
+    Extracurricular = st.selectbox('Have you participated in any extracurricular activity 1-Yes , 0-No', [1, 0])
+    Backlogs = st.selectbox('Do you have/had any backlogs 1-Yes , 0-No', [1, 0])
     # Add button to make prediction
     submit_button = st.form_submit_button(label='Predict Placement')
 
