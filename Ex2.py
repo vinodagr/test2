@@ -28,7 +28,7 @@ accuracy = accuracy_score(y_test, y_pred)
 print('Accuracy:', accuracy)
 
 def app():
- with st.form(key='placement-form'):
+ with st.form(key='placement-form1'):
     # Get input from user
     tenth = st.text_input('Enter your 10th percentage')
     tenth_board=st.selectbox('Select your 10th board 1-State , 2-CBSE, 3-ICSE', [1, 2,3])
