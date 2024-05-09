@@ -48,7 +48,7 @@ def app():
 
     if submit_button:
         # Create input dataframe
-        input_df = pd.DataFrame({'tenth':[tenth],'tenth_board':[tenth_board],'twelth': [twelth],'twelth_board':[twelth_board],'twelth_stream':[twelth_stream],'UG': [UG],'UG_Course': [UG_Course]'PG': [PG], 'Gender': [Gender],'UG_Course': [UG_Course]})
+        input_df = pd.DataFrame({'tenth':[tenth],'tenth_board':[tenth_board],'twelth': [twelth],'twelth_board':[twelth_board],'twelth_stream':[twelth_stream],'UG': [UG],'UG_Course': [UG_Course],'PG': [PG], 'Student_Category': [Student_Category],'Certification': [Certification],'Extracurricular': [Extracurricular],'Backlogs': [Backlogs]})
         
         # One-hot encode categorical variables
         # input_df['Gender'] = input_df['Gender'].map({'M': 1, 'F': 0})
