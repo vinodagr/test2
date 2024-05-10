@@ -34,8 +34,6 @@ def app():
  with st.form(key='placement-form1'):
     # Get input from user
     tenth = st.text_input('Enter your 10th percentage')
-    if not tenth:
-            st.error('10th percentage is required!')
     tenth_board=st.selectbox('Select your 10th board 1-State , 2-CBSE, 3-ICSE', [1, 2,3])
     twelth = st.text_input('Enter your 12th percentage')
     twelth_board=st.selectbox('Select your 12th board 1-State , 2-CBSE, 3-ICSE', [1, 2,3])
@@ -52,7 +50,8 @@ def app():
     submit_button = st.form_submit_button(label='Predict Placement')
 
     if submit_button:
-    
+       if not tenth:
+            st.error('10th percentage is required!')
         # Create input dataframe
         input_df = pd.DataFrame({'tenth':[tenth],'tenth_board':[tenth_board],'twelth': [twelth],'twelth_board':[twelth_board],'twelth_stream':[twelth_stream],'UG': [UG],'UG_Course': [UG_Course],'PG': [PG], 'Student_Category': [Student_Category],'Certification': [Certification],'Extracurricular': [Extracurricular],'Backlogs': [Backlogs]})
         
