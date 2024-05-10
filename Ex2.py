@@ -50,8 +50,8 @@ def app():
     submit_button = st.form_submit_button(label='Predict Placement')
 
     if submit_button:
-       if not tenth:
-            st.error('10th percentage is required!')
+     if not tenth:
+      st.error('10th percentage is required!')
         # Create input dataframe
         input_df = pd.DataFrame({'tenth':[tenth],'tenth_board':[tenth_board],'twelth': [twelth],'twelth_board':[twelth_board],'twelth_stream':[twelth_stream],'UG': [UG],'UG_Course': [UG_Course],'PG': [PG], 'Student_Category': [Student_Category],'Certification': [Certification],'Extracurricular': [Extracurricular],'Backlogs': [Backlogs]})
         
