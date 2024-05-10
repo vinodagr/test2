@@ -53,7 +53,7 @@ def app():
      if not tenth:
       st.error('10th percentage is required!')
         # Create input dataframe
-       input_df = pd.DataFrame({'tenth':[tenth],'tenth_board':[tenth_board],'twelth': [twelth],'twelth_board':[twelth_board],'twelth_stream':[twelth_stream],'UG': [UG],'UG_Course': [UG_Course],'PG': [PG], 'Student_Category': [Student_Category],'Certification': [Certification],'Extracurricular': [Extracurricular],'Backlogs': [Backlogs]})
+     input_df = pd.DataFrame({'tenth':[tenth],'tenth_board':[tenth_board],'twelth': [twelth],'twelth_board':[twelth_board],'twelth_stream':[twelth_stream],'UG': [UG],'UG_Course': [UG_Course],'PG': [PG], 'Student_Category': [Student_Category],'Certification': [Certification],'Extracurricular': [Extracurricular],'Backlogs': [Backlogs]})
         
         # One-hot encode categorical variables
         # input_df['Gender'] = input_df['Gender'].map({'M': 1, 'F': 0})
@@ -61,16 +61,16 @@ def app():
         # input_df = pd.get_dummies(input_df, columns=['Gender'])
 
         # Reorder columns to match training data
-       input_df = input_df.reindex(columns=X.columns, fill_value=0)
+     input_df = input_df.reindex(columns=X.columns, fill_value=0)
 
         # Make prediction on input data
-       prediction = model.predict(input_df)
+     prediction = model.predict(input_df)
 
         # Print prediction
-       if prediction == 1:
-           st.write('You are more likely to get placed!')
-       else:
-           st.write('Sorry, you are less likely to get placed.')
+     if prediction == 1:
+         st.write('You are more likely to get placed!')
+     else:
+         st.write('Sorry, you are less likely to get placed.')
 
 
 # Run app
