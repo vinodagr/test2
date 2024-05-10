@@ -52,7 +52,7 @@ def app():
     if submit_button:
      if not tenth:
       st.error('10th percentage is required!')
-      sys.exit()
+      return
      if not twelth:
       st.error('12th percentage is required!')
         # Create input dataframe
