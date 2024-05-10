@@ -34,6 +34,8 @@ def app():
  with st.form(key='placement-form1'):
     # Get input from user
     tenth = st.text_input('Enter your 10th percentage')
+    if not tenth:
+            st.error('10th percentage is required!')
     tenth_board=st.selectbox('Select your 10th board 1-State , 2-CBSE, 3-ICSE', [1, 2,3])
     twelth = st.text_input('Enter your 12th percentage')
     twelth_board=st.selectbox('Select your 12th board 1-State , 2-CBSE, 3-ICSE', [1, 2,3])
