@@ -52,8 +52,8 @@ def app():
     if submit_button:
      if not tenth:
       st.error('10th percentage is required!')
-     if not tenth_board:
-      st.error('10th board is required!')
+     if not twelth:
+      st.error('12th percentage is required!')
         # Create input dataframe
      input_df = pd.DataFrame({'tenth':[tenth],'tenth_board':[tenth_board],'twelth': [twelth],'twelth_board':[twelth_board],'twelth_stream':[twelth_stream],'UG': [UG],'UG_Course': [UG_Course],'PG': [PG], 'Student_Category': [Student_Category],'Certification': [Certification],'Extracurricular': [Extracurricular],'Backlogs': [Backlogs]})
         
