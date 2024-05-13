@@ -65,11 +65,14 @@ def app():
      if not twelth.isdigit():
       st.error('Please enter a numeric value for the 12th percentage!')
       return
-     if not (35 <= int(tenth) <= 100):
+     if not (35 <= int(twelth) <= 100):
       st.error('Please enter the correct 12th percentage!')
       return
      if not UG:
       st.error('UG percentage is required!')
+      return
+     if not (35 <= int(UG) <= 100):
+      st.error('Please enter the correct 10th percentage!')
       return
      if not UG.isdigit():
       st.error('Please enter a numeric value for the UG percentage!')
@@ -79,11 +82,17 @@ def app():
      if not PG.isdigit():
       st.error('Please enter a numeric value for the 10th percentage!')
       return
+     if not (35 <= int(PG) <= 100):
+      st.error('Please enter the correct 10th percentage!')
+      return
      if not Backlogs:
       st.error('No of backlogs required!')
       return
      if not Backlogs.isdigit():
       st.error('Please enter a numeric value for the no of Backlogs!')
+      return
+      if not (0 <= int(tenth) <= 50):
+      st.error('Please enter the correct 10th percentage!')
       return
         # Create input dataframe
      input_df = pd.DataFrame({'tenth':[tenth],'tenth_board':[tenth_board],'twelth': [twelth],'twelth_board':[twelth_board],'twelth_stream':[twelth_stream],'UG': [UG],'UG_Course': [UG_Course],'PG': [PG], 'Student_Category': [Student_Category],'Certification': [Certification],'Extracurricular': [Extracurricular],'Backlogs': [Backlogs]})
