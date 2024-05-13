@@ -71,11 +71,12 @@ def app():
      if not UG:
       st.error('UG percentage is required!')
       return
-     if not (35 <= int(UG) <= 100):
-      st.error('Please enter the correct 10th percentage!')
-      return
      if not UG.isdigit():
       st.error('Please enter a numeric value for the UG percentage!')
+      return
+     if not (35 <= int(UG) <= 100):
+      st.error('Please enter the correct UG percentage!')
+      return
      if not PG:
       st.error('PG percentage is required!')
       return
