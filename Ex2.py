@@ -53,6 +53,9 @@ def app():
      if not tenth:
       st.error('10th percentage is required!')
       return
+     elif not tenth.isdigit():
+      st.error('Please enter a numeric value for the 10th percentage!')
+      return
      if not twelth:
       st.error('12th percentage is required!')
       return
