@@ -91,8 +91,8 @@ def app():
      if not Backlogs.isdigit():
       st.error('Please enter a numeric value for the no of Backlogs!')
       return
-      if not (0 <= int(tenth) <= 50):
-      st.error('Please enter the correct 10th percentage!')
+     if not (0 <= int(Backlogs) <= 50):
+      st.error('Please enter the correct BAcklogs value!')
       return
         # Create input dataframe
      input_df = pd.DataFrame({'tenth':[tenth],'tenth_board':[tenth_board],'twelth': [twelth],'twelth_board':[twelth_board],'twelth_stream':[twelth_stream],'UG': [UG],'UG_Course': [UG_Course],'PG': [PG], 'Student_Category': [Student_Category],'Certification': [Certification],'Extracurricular': [Extracurricular],'Backlogs': [Backlogs]})
