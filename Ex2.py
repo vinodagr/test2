@@ -64,6 +64,10 @@ def app():
       return
      if not twelth.isdigit():
       st.error('Please enter a numeric value for the 12th percentage!')
+      return
+     if not (35 <= int(tenth) <= 100):
+      st.error('Please enter the correct 12th percentage!')
+      return
      if not UG:
       st.error('UG percentage is required!')
       return
