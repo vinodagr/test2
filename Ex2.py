@@ -76,7 +76,7 @@ def app():
       st.error('No of backlogs required!')
       return
      if not Backlogs.isdigit():
-      st.error('Please enter a numeric value for the npo of Backlogs!')
+      st.error('Please enter a numeric value for the no of Backlogs!')
       return
         # Create input dataframe
      input_df = pd.DataFrame({'tenth':[tenth],'tenth_board':[tenth_board],'twelth': [twelth],'twelth_board':[twelth_board],'twelth_stream':[twelth_stream],'UG': [UG],'UG_Course': [UG_Course],'PG': [PG], 'Student_Category': [Student_Category],'Certification': [Certification],'Extracurricular': [Extracurricular],'Backlogs': [Backlogs]})
