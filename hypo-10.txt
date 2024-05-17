@@ -1,0 +1,41 @@
+#hypothesis-10
+import pandas as pd
+import numpy as np
+import seaborn as sns
+from scipy import stats
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+
+# Load the data
+data = pd.read_csv('C:\\Users\\Vinod A\\Desktop\\Testfinal.csv')
+
+# Define extra-curricular activity participation as a binary variable
+data['extra_curricular_participation'] = np.where(data['extra_curricular'] == 1, 1, 0)
+
+# Define the predictor variables and target variable
+X = data[['extra_curricular']]
+y = data['Campus Placement']
+
+# Split the data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Fit a logistic regression model
+model = LogisticRegression()
+model.fit(X_train, y_train)
+
+# Make predictions on the test set
+y_pred = model.predict(X_test)
+
+# Calculate the accuracy of the model
+accuracy = accuracy_score(y_test, y_pred)
+print(f"Accuracy: {accuracy}")
+
+# Test the hypothesis using a chi-square test
+crosstab = pd.crosstab(data['extra_curricular'], data['Campus Placement'])
+chi2, p_value, dof, expected = stats.chi2_contingency(crosstab)
+print(f"Chi-square value: {chi2}")
+print(f"P-value: {p_value}")
+
+# Visualize the relationship between extra-curricular participation and placement status
+sns.catplot(x='extra_curricular', y='Campus Placement', data=data, kind='bar')

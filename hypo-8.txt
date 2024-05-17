@@ -1,0 +1,18 @@
+#hypothesis-8
+import pandas as pd
+from scipy.stats import ttest_ind
+import seaborn as sns
+# Load data into a pandas DataFrame
+data = pd.read_csv("C:\\Users\\Vinod A\\Desktop\\Testfinal.csv")
+
+# Separate data by gender
+male_salaries = data[data["Gender"] ==0]["Salary"]
+female_salaries = data[data["Gender"] == 1]["Salary"]
+
+# Conduct two-sample t-test
+result = ttest_ind(male_salaries, female_salaries, equal_var=False)
+
+# Print t-statistic and p-value
+print("t-statistic: {:.4f}".format(result.statistic))
+print("p-value: {:.4f}".format(result.pvalue))
+sns.catplot(x='Gender', y='Salary', data=data, kind='bar')

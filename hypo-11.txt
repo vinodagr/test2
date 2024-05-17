@@ -1,0 +1,23 @@
+#hypothesis-11
+import pandas as pd
+import numpy as np
+import statsmodels.api as sm
+import seaborn as sns
+# Assuming you have a dataset with columns 'backlogs' and 'placement'
+# Load your dataset here
+data = pd.read_csv("C:\\users\\Vinod A\\Desktop\\Testfinal.csv")
+
+# Add a constant term to the independent variable (backlogs)
+data['const'] = 1
+
+# Define the independent variable (backlogs) and dependent variable (placement)
+X = data[['const', 'backlogs']]
+y = data['Campus Placement']
+
+# Fit logistic regression model
+logit_model = sm.Logit(y, X)
+result = logit_model.fit()
+
+# Print summary of logistic regression
+print(result.summary())
+sns.catplot(x='backlogs', y='Campus Placement', data=data, kind='bar')

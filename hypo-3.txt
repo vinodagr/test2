@@ -1,0 +1,56 @@
+# hypothesis 3
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+
+# Read data from CSV file
+data = pd.read_csv('C:\\Users\\Vinod A\\Desktop\\Test.csv')
+
+# Plot academic performance vs. placement outcomes
+plt.figure(figsize=(12, 6))
+plt.subplot(1, 3, 1)
+plt.scatter(data['10th Percentage'], data['Campus Placement'], alpha=0.5)
+plt.xlabel('SSC Grades')
+plt.ylabel('Placement')
+plt.title('SSC Grades vs. Placement')
+
+plt.subplot(1, 3, 2)
+plt.scatter(data['12th Percentage'], data['Campus Placement'], alpha=0.5)
+plt.xlabel('HSC Grades')
+plt.ylabel('Placement')
+plt.title('HSC Grades vs. Placement')
+
+plt.subplot(1, 3, 3)
+plt.scatter(data['Graduation Percentage'], data['Campus Placement'], alpha=0.5)
+plt.xlabel('UG Grades')
+plt.ylabel('Placement')
+plt.title('UG Grades vs. Placement')
+
+plt.tight_layout()
+plt.show()
+
+# Prepare data for logistic regression
+X = data[['10th Percentage', '12th Percentage', 'Graduation Percentage']]
+y = data['Campus Placement']
+
+# Split data into train and test sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Fit logistic regression model
+logreg = LogisticRegression()
+logreg.fit(X_train, y_train)
+
+# Predict placement outcomes on the test set
+y_pred = logreg.predict(X_test)
+
+# Calculate accuracy
+accuracy = accuracy_score(y_test, y_pred)
+print("Accuracy:", accuracy)
+# Display coefficient values
+print("Coefficient Values:")
+for feature, coef in zip(X.columns, logreg.coef_[0]):
+    print(feature, ':', coef)
+

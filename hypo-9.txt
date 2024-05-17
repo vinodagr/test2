@@ -1,0 +1,23 @@
+# hypothesis-9
+import pandas as pd
+import scipy.stats as stats
+import seaborn as sns
+# Load data into a pandas DataFrame
+data = pd.read_csv("C:\\users\\Vinod A\\Desktop\\Testfinal.csv")
+
+# Separate data by student category
+
+category1 = data[data["Category"] ==1]["Salary"]
+category2 = data[data["Category"] ==2]["Salary"]
+category3 = data[data["Category"] ==3]["Salary"]
+category4 = data[data["Category"] ==4]["Salary"]
+category5 = data[data["Category"] ==5]["Salary"]
+category6 = data[data["Category"] ==6]["Salary"]
+category7 = data[data["Category"] ==7]["Salary"]
+# Perform ANOVA
+f_statistic, p_value = stats.f_oneway(category1, category2, category3,category4,category5,category6,category7)
+
+# Print results
+print("F-statistic: {:.4f}".format(f_statistic))
+print("p-value: {:.4f}".format(p_value)) 
+sns.catplot(x='Category', y='Salary', data=data, kind='bar')

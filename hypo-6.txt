@@ -1,0 +1,20 @@
+# hypothesis-6
+#SSC & HSC board do not affect a job placement
+import pandas as pd
+from scipy.stats import chi2_contingency
+import seaborn as sns
+# Load data into a pandas DataFrame
+data = pd.read_csv("C:\\Users\\Vinod A\\Desktop\\testfinal.csv")
+
+# Create a contingency table of job placements vs. SSC & HSC board types
+contingency_table = pd.crosstab(data["Campus Placement"], [data["10th Board"],data["12th Board"]])
+
+# Perform chi-square test of independence
+chi2, p_value, dof, expected = chi2_contingency(contingency_table)
+
+# Print results
+print("Chi-squared statistic: {:.4f}".format(chi2))
+print("Degrees of freedom: {}".format(dof))
+print("p-value: {:.4f}".format(p_value))
+sns.catplot(x='10th Board', y='Campus Placement', data=data, kind='bar')
+sns.catplot(x='12th Board', y='Campus Placement', data=data, kind='bar')

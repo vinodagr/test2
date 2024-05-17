@@ -1,0 +1,24 @@
+# hypothesis -4
+import pandas as pd
+from scipy.stats import chi2_contingency
+import seaborn as sns
+# Read data from CSV file
+data = pd.read_csv('C:\\Users\\Vinod A\\Desktop\\Testfinal.csv')
+
+# Contingency table of Gender and Campus Placement
+contingency_table = pd.crosstab(data['Gender'], data['Campus Placement'])
+
+# Print contingency table
+print("Contingency Table:")
+print(contingency_table)
+
+# Chi-square test of independence
+chi2, p, dof, expected = chi2_contingency(contingency_table)
+
+# Print results
+print("\nChi-square Statistic:", chi2)
+print("p-value:", p)
+print("Degrees of Freedom:", dof)
+print("Expected Frequencies:")
+print(expected)
+sns.catplot(x='Gender', y='Campus Placement', data=data, kind='bar')
