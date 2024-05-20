@@ -28,6 +28,10 @@ y_pred = model.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 print('Accuracy:', accuracy)
 
+passage="""
+hello
+"""
+
 
 def app():
  with st.form(key='placement-form1'):
@@ -113,6 +117,7 @@ def app():
          st.write('You are more likely to get placed!')
      else:
          st.write('Sorry, you are less likely to get placed.')
+         st.write(passage)
          # Call the function to display the passage
          
 
