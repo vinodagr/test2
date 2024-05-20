@@ -141,7 +141,8 @@ def app():
      if prediction == 1:
          start = "\033[1m"
          end = "\033[0m"
-         st.write(f"{start}{'You are more likely to get placed! Still work on following recommendations based on MCA alumni past experiences for you as follows:'}{end}")
+         text="You are more likely to get placed! Still work on following recommendations based on MCA alumni past experiences for you as follows:"
+         st.write(f"{start}{text}{end}")
          points = passage.strip().split('\n')
     
          # Print each point with a bullet
