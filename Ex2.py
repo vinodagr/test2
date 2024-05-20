@@ -31,20 +31,21 @@ print('Accuracy:', accuracy)
 
 
 
-def display_passage(passage):
+def display_passage():
+    passage = """
+    Persistence and Determination:
+    Remain persistent in their job search efforts, despite facing rejections or challenges.
+    Emphasize the importance of staying determined and not giving up, as success may come after multiple attempts.
+
+
+    """
     max_length = 1000  # Set a max length for each print
     for i in range(0, len(passage), max_length):
         print(passage[i:i+max_length])
    
     
 # Example passage
-passage = """
-Persistence and Determination:
-Remain persistent in their job search efforts, despite facing rejections or challenges.
-Emphasize the importance of staying determined and not giving up, as success may come after multiple attempts.
 
-
-"""
 
 
 
@@ -132,7 +133,7 @@ def app():
      if prediction == 1:
          st.write('You are more likely to get placed!')
      else:
-         display_passage(passage)
+         display_passage()
          # st.write('Sorry, you are less likely to get placed.')
          # Call the function to display the passage
          
