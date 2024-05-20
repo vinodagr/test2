@@ -29,18 +29,6 @@ accuracy = accuracy_score(y_test, y_pred)
 print('Accuracy:', accuracy)
 
 
-
-
-def display_passage():
-    print("hello")
-   
-    
-# Example passage
-
-
-
-
-
 def app():
  with st.form(key='placement-form1'):
     # Get input from user
@@ -124,8 +112,7 @@ def app():
      if prediction == 1:
          st.write('You are more likely to get placed!')
      else:
-         display_passage()
-         # st.write('Sorry, you are less likely to get placed.')
+         st.write('Sorry, you are less likely to get placed.')
          # Call the function to display the passage
          
 
