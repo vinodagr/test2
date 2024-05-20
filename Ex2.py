@@ -29,7 +29,7 @@ accuracy = accuracy_score(y_test, y_pred)
 print('Accuracy:', accuracy)
 
 
-display_passage(passage)
+
 
 def display_passage(passage):
     print(passage)
@@ -160,7 +160,7 @@ def app():
      if prediction == 1:
          st.write('You are more likely to get placed!')
      else:
-         st.write('Sorry, you are less likely to get placed.')
+         # st.write('Sorry, you are less likely to get placed.')
          # Call the function to display the passage
          display_passage(passage)
 
