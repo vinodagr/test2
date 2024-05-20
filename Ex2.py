@@ -28,10 +28,12 @@ y_pred = model.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 print('Accuracy:', accuracy)
 
+
+display_passage(passage)
+
 def display_passage(passage):
     print(passage)
- display_passage(passage)
-
+    
 # Example passage
 passage = """
 Persistence and Determination:
