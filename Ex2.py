@@ -31,6 +31,7 @@ print('Accuracy:', accuracy)
 def display_passage(passage):
     print(passage)
 
+
 # Example passage
 passage = """
 Persistence and Determination:
