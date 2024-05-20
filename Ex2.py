@@ -30,7 +30,7 @@ print('Accuracy:', accuracy)
 
 def display_passage(passage):
     print(passage)
-
+ display_passage(passage)
 
 # Example passage
 passage = """
