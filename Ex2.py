@@ -32,7 +32,10 @@ print('Accuracy:', accuracy)
 
 
 def display_passage(passage):
-    print(passage)
+    max_length = 1000  # Set a max length for each print
+    for i in range(0, len(passage), max_length):
+        print(passage[i:i+max_length])
+   
     
 # Example passage
 passage = """
