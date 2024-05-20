@@ -139,7 +139,7 @@ def app():
 
         # Print prediction
      if prediction == 1:
-         st.write('You are more likely to get placed! Still work on following recommendations')
+         st.write('You are more likely to get placed! Still work on following recommendations based on MCA alumni past experiences for you as follows:')
          points = passage.strip().split('\n')
     
          # Print each point with a bullet
@@ -148,7 +148,7 @@ def app():
             st.write(f"- {point.strip()}")
          # Call the function to display the passage
      else:
-         st.write('Sorry, you are less likely to get placed. Recommendations for you as follows:')
+         st.write('Sorry, you are less likely to get placed. Recommendations based on MCA alumni past experiences for you as follows:')
          points = passage.strip().split('\n')
     
          # Print each point with a bullet
