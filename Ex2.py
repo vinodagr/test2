@@ -5,8 +5,8 @@ import pandas as pd
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
-st.title("My Streamlit App")
-st.write("Welcome to campus placement prediction application!")
+st.title("Welcome to campus placement prediction application!")
+st.write("Enter your academic details here")
 # Load data
 df = pd.read_csv('mca_alumni.csv')
 
