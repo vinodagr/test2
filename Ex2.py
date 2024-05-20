@@ -80,6 +80,7 @@ Stay Informed: Stay informed about industry trends, job market dynamics, and opp
 def app():
  with st.form(key='placement-form1'):
     # Get input from user
+    display_passage(passage)
     tenth = st.text_input('Enter your 10th percentage')
     tenth_board=st.selectbox('Select your 10th board 1-State , 2-CBSE, 3-ICSE', [1, 2,3])
     twelth = st.text_input('Enter your 12th percentage')
@@ -160,7 +161,7 @@ def app():
      if prediction == 1:
          st.write('You are more likely to get placed!')
      else:
-         # st.write('Sorry, you are less likely to get placed.')
+         st.write('Sorry, you are less likely to get placed.')
          # Call the function to display the passage
          display_passage(passage)
 
