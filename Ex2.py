@@ -132,9 +132,10 @@ def app():
      if prediction == 1:
          st.write('You are more likely to get placed!')
      else:
-         st.write('Sorry, you are less likely to get placed.')
-         # Call the function to display the passage
          display_passage(passage)
+         # st.write('Sorry, you are less likely to get placed.')
+         # Call the function to display the passage
+         
 
 
 # Run app
