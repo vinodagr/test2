@@ -30,8 +30,7 @@ print('Accuracy:', accuracy)
 
 
 passage="""
-Persistence and Determination:
-Remain persistent in their job search efforts, despite facing rejections or challenges.
+Persistence and Determination: Remain persistent in their job search efforts, despite facing rejections or challenges.
 Emphasize the importance of staying determined and not giving up, as success may come after multiple attempts.
 Skill Improvement and Up skilling:
 Continuously work on improving their skills and gaining new experiences through internships, certifications, and online courses. Explore emerging technologies and acquiring relevant skills to stay competitive in the job market.
