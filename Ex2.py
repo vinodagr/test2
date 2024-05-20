@@ -28,6 +28,50 @@ y_pred = model.predict(X_test)
 accuracy = accuracy_score(y_test, y_pred)
 print('Accuracy:', accuracy)
 
+def display_passage(passage):
+    print(passage)
+
+# Example passage
+passage = """
+Persistence and Determination:
+Remain persistent in their job search efforts, despite facing rejections or challenges.
+Emphasize the importance of staying determined and not giving up, as success may come after multiple attempts.
+Skill Improvement and Up skilling:
+Continuously work on improving their skills and gaining new experiences through internships, certifications, and online courses. Explore emerging technologies and acquiring relevant skills to stay competitive in the job market.
+Networking and Referrals:
+Highlight the value of networking with professionals in their field of interest, both online (e.g., LinkedIn) and offline (e.g., industry events).Seek referrals from friends, family, or alumni who may have connections in companies they're interested in.
+Tailoring Applications and Personalization:
+Customize resumes and cover letters for each job application, highlighting relevant experiences and skills. Research companies thoroughly and check their applications to match the company's culture and requirements.
+Adaptability and Flexibility:
+Stress the importance of being flexible and open to various job opportunities, even if they are outside their initial preferences. Adapt to changing market conditions and consider relocation if necessary for better job prospects.
+Utilization of Online Portals:
+Utilize online job portals effectively for job search activities, such as creating profiles, setting up job alerts, and applying to relevant positions regularly. Explore job portals specific to their industry or field of interest for additional opportunities.
+Challenges of the Job Market:
+Be prepared for the challenges they may face in the job market, such as high competition, recession, or limited job opportunities in certain locations or industries.Strategies for overcoming these challenges, such as expanding their job search criteria, seeking temporary positions, or considering alternative career paths.
+Location and Relocation:
+Relocation for job opportunities and be open to this option if it aligns with their career goals. Research potential locations for job prospects and considering factors such as cost of living, job market demand, and career growth opportunities.
+Initial Rejections and Success over Time:
+Be prepared for initial rejections in their job search journey and reassure that success may come with persistence and continued effort. Learn from rejections, seek feedback when possible, and use those experiences to improve their future job applications and interviews.
+Diversify Your Activities: Explore a variety of activities beyond academics, including extracurriculars, leadership roles, skill development workshops, and community engagement. This will help you develop a well-rounded skill set and enrich your college experience.
+Take on Leadership Roles: Seek opportunities to take on leadership and organizational roles in clubs, societies, or student associations. This will not only enhance your leadership skills but also provide valuable experience in team management and event organization.
+Invest in Skill Development: Participate in skill development workshops, technical events, and coding competitions to enhance your practical skills. Focus on acquiring both technical and soft skills that are relevant to your field of study or future career aspirations.
+Build Your Network: Actively engage in networking opportunities through recruitment drives, departmental activities, and industry events. Networking can help you establish connections with professionals in your field, explore career opportunities, and gain valuable insights into industry trends.
+Seek Recognition and Awards: Strive for excellence in your pursuits and actively pursue opportunities to gain recognition for your achievements. Whether it's winning competitions, receiving certifications, or being awarded for your contributions, recognition can boost your confidence and enhance your resume.
+Balance Academic and Extracurricular Activities: While academics are important, don't neglect extracurricular activities and personal interests. Balance your time effectively to ensure you have a well-rounded college experience that includes both academic and non-academic pursuits.
+Contribute to the Community: Get involved in community engagement initiatives, volunteer programs, or social gatherings that contribute positively to society. Engaging with your community not only helps others but also fosters personal growth and a sense of social responsibility.
+Set Personal Goals and Prioritize Self-Development: Reflect on your interests, strengths, and areas for improvement, and set personal goals for self-development. Whether it's learning a new skill, pursuing a passion project, or taking on a leadership role, prioritize activities that align with your personal and professional aspirations.
+By following these recommendations, current students can make the most of their college experience, develop valuable skills, expand their networks, and prepare themselves for future success in their academic and professional career.
+Regular Profile Maintenance: Make it a habit to regularly update your professional profiles on platforms like LinkedIn, Naukri, and others. Ensure your profiles are complete, up-to-date, and reflect your current skills and experiences.
+Engage Actively: Stay actively engaged with relevant content, discussions, and networking events on social media platforms. Participate in industry forums, groups, and online communities to showcase your expertise and expand your network.
+Continuous Skill Development: Dedicate time consistently to enhance your skills through certifications, online courses, and practical projects. Identify emerging trends in your field and acquire the necessary skills to stay competitive in the job market.
+Networking Persistence: Be proactive in networking by reaching out to professionals in your field, attending industry events, and joining relevant groups. Cultivate meaningful connections and maintain regular communication to expand your professional network.
+Maintain a Positive Mindset: Job searching can be challenging, but maintaining a positive attitude and staying resilient in the face of rejections or setbacks is crucial. Stay focused on your goals, celebrate small victories, and keep pushing forward with determination.
+Seek Guidance: Don't hesitate to seek guidance from mentors, career counselors, or alumni who can provide valuable insights and advice. Utilize resources available through your university or online platforms to gain guidance on career planning and job search strategies.
+Stay Informed: Stay informed about industry trends, job market dynamics, and opportunities in your field. Keep yourself updated on the latest developments, technologies, and job requirements to align your skills and experiences accordingly.
+
+"""
+
+
 
 
 def app():
@@ -114,6 +158,8 @@ def app():
          st.write('You are more likely to get placed!')
      else:
          st.write('Sorry, you are less likely to get placed.')
+         # Call the function to display the passage
+         display_passage(passage)
 
 
 # Run app
