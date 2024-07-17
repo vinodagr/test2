@@ -136,13 +136,13 @@ def app():
 
         # Make prediction on input data
      prediction = model.predict(input_df)
-     prediction1 = model.predict(input_df)[:,1]*100
+   
         # Print prediction
      if prediction == 1:
          start = "\033[1m"
          end = "\033[0m"
          st.write('You are more likely to get placed! Still work on following recommendations based on MCA alumni past experiences for you as follows:')
-         st.write(prediction1)
+    
          points = passage.strip().split('\n')
     
          # Print each point with a bullet
