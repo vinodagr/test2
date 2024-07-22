@@ -142,7 +142,18 @@ def app():
          start = "\033[1m"
          end = "\033[0m"
          st.write('You are more likely to get placed! Still work on following recommendations based on MCA alumni past experiences for you as follows:')
-    
+
+         probability = model.predict_proba(input_df)  # Replace with your actual method to get probabilities
+
+         if isinstance(probability, list):
+           probability = probability[0][1]  # Assuming probability for class 1 is what you need
+
+           probability_percentage = probability * 100
+
+           st.write(f"Probability of placement: {probability_percentage:.2f}%")
+
+
+      
          points = passage.strip().split('\n')
     
          # Print each point with a bullet
