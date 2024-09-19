@@ -125,7 +125,7 @@ def app():
       return
         # Create input dataframe
      input_df = pd.DataFrame({'tenth':[tenth],'tenth_board':[tenth_board],'twelth': [twelth],'twelth_board':[twelth_board],'twelth_stream':[twelth_stream],'UG': [UG],'UG_Course': [UG_Course],'PG': [PG], 'Student_Category': [Student_Category],'Certification': [Certification],'Extracurricular': [Extracurricular],'Backlogs': [Backlogs]})
-     input_df1=input_df    
+     input_df1=input_df.copy()    
         # One-hot encode categorical variables
         # input_df['Gender'] = input_df['Gender'].map({'M': 1, 'F': 0})
         # input_df['UG_Course'] = input_df['UG_Course'].map({'1': 1, '2': 2,'3': 3})
