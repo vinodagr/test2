@@ -144,7 +144,8 @@ def app():
          st.write('You are more likely to get placed! Still work on following recommendations based on MCA alumni past experiences for you as follows:')
 
          probability = model.predict_proba(input_df)  # Replace with your actual method to get probabilities
-         print(f"Probability of placement = {prob * 100:.2f}%")
+         for i, prob in enumerate(probabilities):
+           print(f"New Student {i+1}: Probability of placement = {prob * 100:.2f}%")
             
          points = passage.strip().split('\n')
     
