@@ -145,7 +145,7 @@ def app():
 
          probability = model.predict_proba(input_df1)  # Replace with your actual method to get probabilities
          for i, prob in enumerate(probabilities):
-           print(f"New Student {i+1}: Probability of placement = {prob * 100:.2f}%")
+           st.write(f"New Student {i+1}: Probability of placement = {prob * 100:.2f}%")
             
          points = passage.strip().split('\n')
     
