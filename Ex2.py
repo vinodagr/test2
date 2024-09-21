@@ -5,8 +5,8 @@ import pandas as pd
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
-st.title("Welcome to campus placement prediction application!")
-st.write("Enter your academic details here")
+st.title("My Streamlit App")
+st.write("Welcome to campus placement prediction application!")
 # Load data
 df = pd.read_csv('mca_alumni.csv')
 
@@ -136,16 +136,10 @@ def app():
 
         # Make prediction on input data
      prediction = model.predict(input_df)
-   
+
         # Print prediction
      if prediction == 1:
-         start = "\033[1m"
-         end = "\033[0m"
-         st.write('You are more likely to get placed! Still work on following recommendations based on MCA alumni past experiences for you as follows:')
-
-         probability = model.predict_proba(input_df)  # Replace with your actual method to get probabilities
-
-            
+         st.write('You are more likely to get placed! Still work on following recommendations')
          points = passage.strip().split('\n')
     
          # Print each point with a bullet
@@ -154,7 +148,7 @@ def app():
             st.write(f"- {point.strip()}")
          # Call the function to display the passage
      else:
-         st.write('Sorry, you are less likely to get placed. Recommendations based on MCA alumni past experiences for you as follows:')
+         st.write('Sorry, you are less likely to get placed. Recommendations for you as follows:')
          points = passage.strip().split('\n')
     
          # Print each point with a bullet
@@ -168,5 +162,3 @@ def app():
 # Run app
 if __name__ == '__main__':
     app()
-
-
