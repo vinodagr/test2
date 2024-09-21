@@ -5,7 +5,7 @@ import pandas as pd
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
-from sklearn.preprocessing import StandardScaler
+
 st.title("Welcome to campus placement prediction application!")
 st.write("Enter your academic details here")
 # Load data
@@ -143,9 +143,9 @@ def app():
          start = "\033[1m"
          end = "\033[0m"
          st.write('You are more likely to get placed! Still work on following recommendations based on MCA alumni past experiences for you as follows:')
-         X_test_scaled = scaler.transform(X_test)
+        
          probability = model.predict_proba(X_test_scaled)  # Replace with your actual method to get probabilities
-         st.write(probability)           
+             
          points = passage.strip().split('\n')
     
          # Print each point with a bullet
