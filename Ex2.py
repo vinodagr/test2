@@ -139,7 +139,7 @@ def app():
      
    
         # Print prediction
-     if prediction == 1:
+      if prediction == 1:
          start = "\033[1m"
          end = "\033[0m"
          st.write('You are more likely to get placed! Still work on following recommendations based on MCA alumni past experiences for you as follows:')
