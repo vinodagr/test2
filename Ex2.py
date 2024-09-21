@@ -144,7 +144,7 @@ def app():
          end = "\033[0m"
          st.write('You are more likely to get placed! Still work on following recommendations based on MCA alumni past experiences for you as follows:')
         
-         probability = model.predict_proba(X_test_scaled)  # Replace with your actual method to get probabilities
+         probability = model.predict_proba(input_df)  # Replace with your actual method to get probabilities
              
          points = passage.strip().split('\n')
     
