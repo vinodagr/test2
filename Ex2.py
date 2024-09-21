@@ -135,9 +135,9 @@ def app():
     
         # Reorder columns to match training data
      input_df = input_df.reindex(columns=X.columns, fill_value=0)
-
+       prediction = model.predict(input_df)
         # Make prediction on input data
-      prediction = model.predict(input_df)
+     
    
         # Print prediction
      if prediction == 1:
