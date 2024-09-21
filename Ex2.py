@@ -5,7 +5,6 @@ import pandas as pd
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
-
 st.title("Welcome to campus placement prediction application!")
 st.write("Enter your academic details here")
 # Load data
@@ -125,27 +124,28 @@ def app():
       st.error('Please enter the correct BAcklogs value!')
       return
         # Create input dataframe
-      input_df = pd.DataFrame({'tenth':[tenth],'tenth_board':[tenth_board],'twelth': [twelth],'twelth_board':[twelth_board],'twelth_stream':[twelth_stream],'UG': [UG],'UG_Course': [UG_Course],'PG': [PG], 'Student_Category': [Student_Category],'Certification': [Certification],'Extracurricular': [Extracurricular],'Backlogs': [Backlogs]})
-      
+     input_df = pd.DataFrame({'tenth':[tenth],'tenth_board':[tenth_board],'twelth': [twelth],'twelth_board':[twelth_board],'twelth_stream':[twelth_stream],'UG': [UG],'UG_Course': [UG_Course],'PG': [PG], 'Student_Category': [Student_Category],'Certification': [Certification],'Extracurricular': [Extracurricular],'Backlogs': [Backlogs]})
+        
         # One-hot encode categorical variables
         # input_df['Gender'] = input_df['Gender'].map({'M': 1, 'F': 0})
         # input_df['UG_Course'] = input_df['UG_Course'].map({'1': 1, '2': 2,'3': 3})
         # input_df = pd.get_dummies(input_df, columns=['Gender'])
-       
+
         # Reorder columns to match training data
-      input_df = input_df.reindex(columns=X.columns, fill_value=0)
-       
+     input_df = input_df.reindex(columns=X.columns, fill_value=0)
+
         # Make prediction on input data
-      prediction = model.predict(input_df)
+     prediction = model.predict(input_df)
    
         # Print prediction
-      if prediction == 1:
+     if prediction == 1:
          start = "\033[1m"
          end = "\033[0m"
          st.write('You are more likely to get placed! Still work on following recommendations based on MCA alumni past experiences for you as follows:')
-        
+
          probability = model.predict_proba(input_df)  # Replace with your actual method to get probabilities
-             
+
+            
          points = passage.strip().split('\n')
     
          # Print each point with a bullet
