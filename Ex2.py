@@ -133,7 +133,7 @@ def app():
         # input_df = pd.get_dummies(input_df, columns=['Gender'])
        
         # Reorder columns to match training data
-      input_df = input_df.reindex(columns=X.columns, fill_value=0)
+     input_df = input_df.reindex(columns=X.columns, fill_value=0)
        
         # Make prediction on input data
        prediction = model.predict(input_df)
