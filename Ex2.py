@@ -131,10 +131,9 @@ def app():
         # input_df['Gender'] = input_df['Gender'].map({'M': 1, 'F': 0})
         # input_df['UG_Course'] = input_df['UG_Course'].map({'1': 1, '2': 2,'3': 3})
         # input_df = pd.get_dummies(input_df, columns=['Gender'])
-    
-    
+       
         # Reorder columns to match training data
-        input_df = input_df.reindex(columns=X.columns, fill_value=0)
+     input_df = input_df.reindex(columns=X.columns, fill_value=0)
        
         # Make prediction on input data
      
